@@ -16,6 +16,7 @@ namespace EmployeeDetails
             int empCount;
             Console.Write("How many Employee Details you want to add:");
             empCount=Convert.ToInt32(Console.ReadLine());
+            List<Emp> empList = new List<Emp>();
             for (int i = 1; i <=empCount; i++)
             {
                 Emp emp= new Emp();
@@ -23,6 +24,7 @@ namespace EmployeeDetails
                 emp.SetEmpDetails();
                 emp.SalaryPerAnnum();
                 emp.GetEmpDetails();
+                empList.Add(emp);
             }
         }
     }
